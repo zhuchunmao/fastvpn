@@ -9,7 +9,7 @@
 #v2.6 修改strong 的配置文件，修改了strongswan的安装文件，安装时增加了--enable-kernel-libipsec
 #v2.7 通过yum安装strongswan 与strongswan-libipsec（用于连接vpn服务器） strongswan-tnc-imcvs（用于radius支持）
 #       安装strongswan-libipsec后 xl2tp 将无法使用，通过make安装结果也是一样的
-#v2.8 不能删除 strongswan-libipsec，删除后win7连接ikev2后上不了外网，存在一个问题usr_reg_new 中的strongswan路径错误,，删除了netdisco
+#v2.8 不能删除 strongswan-libipsec，删除后win7连接ikev2后上不了外网，解决usr_reg_new 中的strongswan路径错误,删除了netdisco
 function set_ntp(){
 	setenforce 0
 	sed -i "s/SELINUX=enforcing/SELINUX=disabled/g" /etc/selinux/config
