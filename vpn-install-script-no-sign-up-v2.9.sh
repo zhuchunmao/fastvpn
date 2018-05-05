@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+#自己搭建VPN服务器脚本，包含ike，openvpn两种
 function set_ntp(){
 	setenforce 0
 	sed -i "s/SELINUX=enforcing/SELINUX=disabled/g" /etc/selinux/config
